@@ -1,0 +1,44 @@
+# --- 1. Python 虚拟环境 ---
+# 常见虚拟环境目录名
+venv/
+.venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+.venv_downloader/
+# Conda 环境 
+anaconda3/
+miniconda3/
+
+# --- 2. Python 运行时垃圾 ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- 3. IDE 配置 ---
+.vscode/
+.idea/
+
+# --- 4. 大模型与镜像  ---
+*.tar
+*.tar.gz
+*.zip
+*.gguf
+*.bin
+*.pth
+*.pt
+*.safetensors
+*.onnx
+*.engine
+tiktoken_cache/
+
+# --- 5. 忽略特定数据目录的内容 ---
+01_Images/*
+02_Models/*
+03_Scripts/logs/* # --- 6. 核心：保留目录结构的白名单 ---
+# 意思是：哪怕上面忽略了 Models 目录，也要强制保留里面的 .gitkeep 文件
+!**/.gitkeep
+!**/README.md
